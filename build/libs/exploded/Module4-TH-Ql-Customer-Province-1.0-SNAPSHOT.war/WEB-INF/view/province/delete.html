@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>delete</title>
+</head>
+<body>
+<h1>delete</h1>
+
+<form action="/delete-province" method="post" th:object="${province}">
+    <table>
+        <tr>
+            <td><input type="hidden" th:field="*{id}"></td>
+        </tr>
+        <tr>
+            <td th:text="${province.name}"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="delete"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
